@@ -54,6 +54,11 @@
         <a-select-option v-for="item in itemList" :key="item">{{ item }}</a-select-option>
       </a-select>
     </a-form-item>
+    <a-form-item label="复杂下拉框2">
+      <a-select mode="multiple" style="width: 100%" :token-separators="[',']" @change="handleChange">
+        <a-select-option v-for="item in itemList" :key="item">{{ item }}</a-select-option>
+      </a-select>
+    </a-form-item>
     <a-form-item label="日期">
       <a-date-picker v-decorator="['date-picker', config]" />
     </a-form-item>
